@@ -4,16 +4,16 @@ const port = process.env.PORT || 3000
 const path = require('path')
 
 
-app.get("/", (req,res) => {
-    res.send("hello world")
-})
+app.get('/',function(req,res) {
+    res.sendFile('calculator.html');
+  });
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
-    app.use(express.static(path.join(__dirname, 'client/build')));
+    app.use(express.static(path.join(__dirname, 'client')));
   // Handle React routing, return all requests to React app
     app.get('/*', function(req, res) {
-      res.sendFile(path.join(__dirname, 'client/build', 'calculator.html'));
+      res.sendFile(path.join(__dirname, 'client', 'calculator.html'));
     });
   }
 
