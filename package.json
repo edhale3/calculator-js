@@ -20,6 +20,7 @@
   "homepage": "https://github.com/edhale3/calculator-js#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "path": "^0.12.7",
     "serve": "^11.3.2"
   }
 }
