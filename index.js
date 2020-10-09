@@ -4,9 +4,9 @@ const port = process.env.PORT || 3000
 const path = require('path')
 
 
-app.get('/',function(req,res) {
-    res.sendFile('calculator.html');
-  });
+// app.get('/',function(req,res) {
+//     res.sendFile('calculator.html');
+//   });
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
